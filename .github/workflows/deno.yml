@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Setup Deno
-        uses: denolib/setup-deno@v1
+        uses: denoland/setup-deno@v1
         with:
           deno-version: ${{ matrix.deno }}
 
