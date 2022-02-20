@@ -10,7 +10,7 @@ jobs:
     name: Test with Deno ${{ matrix.deno }} 
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
 
       - name: Setup Deno
         uses: denoland/setup-deno@v1
