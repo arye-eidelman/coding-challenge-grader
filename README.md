@@ -3,8 +3,10 @@
 A function for running TypeScript/JavaScript leet code chalenges and logging all
 the results to the console.
 
-the grade function accepts your solution function, an array of test cases and an
-optional options object
+Runs on deno.
+
+The grade function accepts your solution function, an array of test cases and an
+optional options object.
 
 The test cases array should be in the format:
 
