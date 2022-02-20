@@ -20,7 +20,8 @@ For example if the chalenge is to get the square of the input number and you
 wrote the following:
 
 ```typescript
-import { grade } from "...";
+
+import { grade } from 'https://deno.land/x/coding_challenge_grader@v0.1.0/mod.ts'
 const testCases: [[number], number][] = [
   [[1], 1],
   [[2], 4],
