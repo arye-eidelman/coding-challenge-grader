@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@master
         with:
-          node-version: 12
+          node-version: 16
 
       - name: Print deno version
         run: deno --version
