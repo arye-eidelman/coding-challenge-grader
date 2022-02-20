@@ -6,7 +6,7 @@ jobs:
 
     strategy:
       matrix:
-        deno: [1.19.0, 1.18.2, 1.17.3, 1.16.4, 1.15.3]
+        deno-version: [1.19.0, 1.18.2, 1.17.3, 1.16.4, 1.15.3]
     name: Test with Deno ${{ matrix.deno }} 
 
     steps:
