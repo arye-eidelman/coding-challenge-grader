@@ -37,13 +37,12 @@ grade(solution, testCases);
 
 you'de get the following output:
 
-[image placeholder]
-
-```json
+![
 passed in 0 milliseconds
 passed in 0 milliseconds
 passed in 0 milliseconds
 failed in 0 milliseconds
 { expected: 9, result: -9 }
 3 of 4 passed
-```
+](./example-result.png)
+
