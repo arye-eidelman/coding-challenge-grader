@@ -1,4 +1,4 @@
-# coding-challenge-grader
+# coding_challenge_grader
 
 A function for running TypeScript/JavaScript leet code chalenges and logging all
 the results to the console.
@@ -45,4 +45,3 @@ failed in 0 milliseconds
 { expected: 9, result: -9 }
 3 of 4 passed
 ](./example-result.png)
-
