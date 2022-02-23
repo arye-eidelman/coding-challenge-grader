@@ -22,8 +22,7 @@ For example if the chalenge is to get the square of the input number and you
 wrote the following:
 
 ```typescript
-
-import { grade } from 'https://deno.land/x/coding_challenge_grader@v0.1.0/mod.ts'
+import { grade } from "https://deno.land/x/coding_challenge_grader@v0.1.0/mod.ts";
 const testCases: [[number], number][] = [
   [[1], 1],
   [[2], 4],
@@ -39,11 +38,9 @@ grade(solution, testCases);
 
 you'de get the following output:
 
-![
-passed in 0 milliseconds
+![passed in 0 milliseconds
 passed in 0 milliseconds
 passed in 0 milliseconds
 failed in 0 milliseconds
 { expected: 9, result: -9 }
-3 of 4 passed
-](./example-result.png)
+3 of 4 passed](./example-result.png)

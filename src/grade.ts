@@ -2,7 +2,7 @@
 
 export default async function grade<Input extends Array<unknown>, Output>(
   fn: (...args: Input) => Output,
-  testCases: { name?: string, input: Input, output: Output }[],
+  testCases: { name?: string; input: Input; output: Output }[],
   { timeout } = { timeout: 1000 },
 ): Promise<void> {
   async function abortTimeout<T extends Array<unknown>, R>(
