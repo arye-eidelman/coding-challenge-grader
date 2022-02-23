@@ -1,8 +1,8 @@
 // import { red, yellow, green } from "https://deno.land/std@0.126.0/fmt/colors.ts";
 
-export default async function grade<In extends Array<unknown>, Out>(
-  fn: (...args: In) => Out,
-  testCases: [In, Out][],
+export default async function grade<Input extends Array<unknown>, Output>(
+  fn: (...args: Input) => Output,
+  testCases: { name?: string, input: Input, output: Output }[],
   { timeout } = { timeout: 1000 },
 ): Promise<void> {
   async function abortTimeout<T extends Array<unknown>, R>(
@@ -26,10 +26,10 @@ export default async function grade<In extends Array<unknown>, Out>(
   let passed = 0;
   for (const testCase of testCases) {
     const startTime = performance.now();
-    const result = await abortTimeout(timeout, fn, testCase[0]);
+    const result = await abortTimeout(timeout, fn, testCase.input);
     const endTime = performance.now();
 
-    if (result === testCase[1]) {
+    if (result === testCase.output) {
       passed++;
       console.log(
         `%cpassed in ${endTime - startTime} milliseconds`,
@@ -40,7 +40,7 @@ export default async function grade<In extends Array<unknown>, Out>(
         `%cfailed in ${endTime - startTime} milliseconds`,
         "color: #f44",
       );
-      console.log({ expected: testCase[1], result: result });
+      console.log({ expected: testCase.output, result: result });
     }
   }
   console.log(
