@@ -1,7 +1,6 @@
 # coding_challenge_grader
 
-A function for running TypeScript/JavaScript leet code chalenges and logging all
-the results to the console.
+A function for running TypeScript/JavaScript leet code chalenges.
 
 Runs on deno.
 
@@ -11,23 +10,23 @@ optional options object.
 The test cases array should be in the format:
 
 ```typescript
-type TestInputArgs = any[]
-type TestResult = any
-type TestCase = [TestInputArgs, TestResult]
-type Solution = (...TestInputArgs) => TestResult
-type grade = (solution, TestCase[]) => Promise<void>
+Array<{
+  name?: string;
+  input: any[],
+  output: any
+}>
 ```
 
 For example if the chalenge is to get the square of the input number and you
 wrote the following:
 
 ```typescript
-import { grade } from "https://deno.land/x/coding_challenge_grader@v0.1.0/mod.ts";
-const testCases: [[number], number][] = [
-  [[1], 1],
-  [[2], 4],
-  [[3], 9],
-  [[-3], 9],
+import { grade } from "https://deno.land/x/coding_challenge_grader@v0.2.0/mod.ts";
+const testCases: { input: [number]; output: number }[] = [
+  [{ input: [1], output: 1 }],
+  [{ input: [2], output: 4 }],
+  [{ input: [3], output: 9 }],
+  [{ input: [-3], output: 9, name: "negetive inputs" }],
 ];
 
 function solution(n: number): number {
